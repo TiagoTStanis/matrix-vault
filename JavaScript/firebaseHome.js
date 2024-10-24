@@ -4,14 +4,6 @@ import { getStorage, ref as createStorageRef, uploadBytesResumable, listAll, get
 import { getDatabase, ref, get, child } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB6n7JhbgbZdz6RHMo8-HgYONd7p0DWNbE",
-    authDomain: "matrix-vault-24d73.firebaseapp.com",
-    databaseURL: "https://matrix-vault-24d73-default-rtdb.firebaseio.com/",
-    projectId: "matrix-vault-24d73",
-    storageBucket: "gs://matrix-vault-24d73.appspot.com",
-    messagingSenderId: "394346850942",
-    appId: "1:394346850942:web:4afd163917908b924bc62f",
-    measurementId: "G-D7W7E85SQG"
 };
 
 const app = initializeApp(firebaseConfig);
