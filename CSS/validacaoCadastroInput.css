@@ -1,0 +1,67 @@
+#nome,
+#email,
+#senha,
+#telefone,
+#confirmaSenha,
+#data_nascimento,
+#masculinoRadio,
+#femininoRadio,
+#pais {
+    transition: border 0.3s ease;
+}
+
+#forcaSenha, #equalSenha {
+    display: inline-block;
+    color: red;
+    margin-left: 10px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-container .toggle-visibility {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #00ff00;
+}
+
+.data-container {
+    position: relative;
+}
+
+.data-container input {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    height: 40px;
+    font-size: 16px;
+}
+
+.toggle-calendar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-110%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #00ff00;
+    pointer-events: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}

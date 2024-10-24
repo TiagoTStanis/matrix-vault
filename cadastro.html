@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/CSS/validacaoCadastroInput.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/man.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/errorStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/ImagemDeFundo/fundoDaTela.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Matrix Vault | Cadastro</title>
+    <!-- Firebase App (necessário para usar qualquer serviço do Firebase) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <canvas id="code-background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+
+    <a href="javascript:history.back()" class="seta-voltar">←</a>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form id="formCadastro">
+            <div class="group-nome">
+                <label>Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                <small id="nomeError" class="glitch-effect" style="font-size: 20px; color: red; display: none;">Erro: ❌
+                    Nome inválido. Sua identidade não foi encontrada na matriz.</small>
+            </div>
+
+            <div class="group-email">
+                <label>E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                <span id="emailError" class="glitch-effect" style="color: red; display: none;">Erro: ❌ E-mail inválido.
+                    Falha na conexão com a rede.</span>
+            </div>
+
+            <div class="group-telefone">
+                <label>Celular:</label>
+                <div id="custom-ddd-select" class="custom-ddd-select">
+                    <span id="selected-ddd">DDD</span>
+                    <ul id="ddd-list" class="ddd-list" style="display: none;"></ul>
+                </div>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu numero">
+                <span id="erroTelefone" class="glitch-effect" style="color: red; display:none;">Erro: ❌ Selecione DDD
+                    antes de digital. Conexão interrompida.</span>
+            </div>
+
+            <div class="group-senha">
+                <div class="password-container">
+                    <label>Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                    <i id="toggleSenha" class="fas fa-eye-slash toggle-visibility"></i>
+                </div>
+
+                <span id="forcaSenha" style="color:red; display:none;"></span>
+
+                <label></label>
+
+                <div class="password-container">
+                    <label>Confirma Senha:</label>
+                    <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Digite sua senha">
+                    <i id="toggleConfirmaSenha" class="fas fa-eye-slash toggle-visibility"></i>
+                </div>
+
+                <span id="equalSenha" class="glitch-effect" style="display:none;"></span>
+
+            </div>
+
+            <div class="group-nascimneto">
+                <label>Data de Nascimento:</label>
+                <div class="data-container">
+                    <input type="date" id="data_nascimento" name="data_nascimento">
+                    <i id="toggleCalendar" class="fas fa-calendar-alt toggle-calendar"></i>
+                </div>
+                <span id="erroDataNascimento" class="glitch-effect" style="color: red; display:none;">Erro: ❌ Data de
+                    nascimento inválida. Informação temporal incorreta.</span>
+            </div>
+            
+            <div class="groupGenero">
+                <label id="genero">Gênero:</label>
+
+                <label for="masculinoRadio" id="masculinoLabel">
+                    <input type="radio" id="masculinoRadio" name="genero" value="Masculino">Masculino
+                </label>
+                <label for="femininoRadio" id="femininoLabel">
+                    <input type="radio" id="femininoRadio" name="genero" value="Feminino">Feminino
+                </label>
+            </div>
+            <span id="erroGeneroDNS" class="glitch-effect" style="display:none;">Erro: ❌ Selecione um gênero.
+                Inconsistência no sistema de identidade.</span>
+            <a></a>
+            <div class="group-pais">
+                <label>País:</label>
+                <select id="pais" name="pais">
+                    <option value="">Selecione um país</option>
+                </select>
+            </div>
+            <span id="erroPais" class="glitch-effect" style="display:none;">Erro: ❌ Selecione um país. Localização não
+                identificada na matriz.</span>
+            <a></a>
+            <a></a>
+            <a></a>
+            <button type="submit" class="btn-submit">Cadastre-se</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.47/libphonenumber-js.min.js"></script>
+    <script src="/ImagemDeFundo/fundoDaTela.js"></script>
+    <script src="/JavaScript/paises.js"></script>
+    <script src="/JavaScript/conuntries.js"></script>
+    <script type="module" src="/JavaScript/firebase-config.js"></script>
+    <script type="module" src="/JavaScript/validacaoCampInput.js" defer></script>
+    
+</body>
+
+</html>

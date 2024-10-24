@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/CSS/man.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/login.css" />
+    <link rel="stylesheet" type="text/css" href="/ImagemDeFundo/fundoDaTela.css" />
+    <title>Matrix Vault | Login</title>
+</head>
+
+<body>
+    <canvas id="code-background"></canvas>
+    <div class="container">
+        <div id="head-container">
+            <a id="btn-emailVoltar" onclick="voltar()">←</a>
+            <h1 class="main-title">Login</h1>
+        </div>
+        <form>
+            <div id="login">
+                <div class="group-email">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+                </div>
+
+                <div class="group-senha" id="group-senha">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                </div>
+            </div>
+            <div class="container-dentro" id="divbtn">
+                <button type="button" id="btn-acessar" onclick="revelaLogin(event)">Acessar</button>
+
+                <button type="submit" id="btn-entrar" class="btn">Entrar</button>
+                <button type="submit" class="btn-submit-esqueci" id="btn-esquiceSenha" href="esqueciSenha.html"
+                    class="esqueci-senha" class="esqueci-senha btn">Esqueci
+                    senha</button>
+            </div>
+
+            <a href="cadastro.html"
+                style="text-decoration: underline; display: block; text-align: center; margin-top: 20px; margin-bottom: 20px; font-size: 12px;  color: #007bff;">Ainda
+                não tem uma conta? Cadastre-se agora!</a>
+        </form>
+    </div>
+
+    <script type="module" src="/JavaScript/resetSenha.js"></script>
+    <script type="module" src="/JavaScript/validacaoLoginbtn.js"></script>
+    <script src="/JavaScript/loginGuest.js"></script>
+    <script src="/ImagemDeFundo/fundoDaTela.js"></script>
+    <script type="module" src="/JavaScript/firebase-config.js"></script>
+</body>
+
+</html>

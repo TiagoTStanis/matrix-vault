@@ -1,0 +1,72 @@
+
+.profile-photo-section {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8), inset 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1), inset 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+input[type="file"] {
+    display: none;
+    margin: 0 auto;
+    color: #00ff00;
+    background-color: transparent;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-align: center;
+    width: 200px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #00cc00;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #00ff00;
+    color: black;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+custom-file-upload:hover {
+    background-color: #00cc00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}

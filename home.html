@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/CSS/man.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/errorStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/ImagemDeFundo/fundoDaTela.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/home.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Matrix Vault | Home</title>
+</head>
+
+<body>
+
+    <canvas id="code-background"></canvas>
+    <div class="logout-section">
+        <button id="logout-btn" class="matrix-btn">Logout</button>
+    </div>
+    <div class="containerHome">
+
+        <div class="profile-upload-section">
+            <div class="profile-info">
+                <a href="perfil.html">
+                    <img src="/ImagemDeFundo/imagem/programador.png" alt="Foto de Perfil" class="profile-pic">
+                </a>
+                <div class="details">
+                    <span class="name">Usuário</span>
+                    <span class="age">Idade: Indefinido</span>
+                </div>
+            </div>
+            <div id="progress-container" style="display: none;">
+                <label for="file-progress">Progresso do upload:</label>
+                <progress id="file-progress" value="0" max="100"></progress>
+                <span id="progress-percent">0%</span>
+            </div>
+
+            <div class="upload-warning">
+                <p class="blinking-warning"><!-- Adicione esta div para o lembrete estilo Matrix -->
+                <div class="upload-warning">
+                    <p class="blinking-warning">Cuidado, <br> Operador: Uploads pesados detectados (Acima de 1000KB).
+                        <br>O tempo aqui é relativo, <br>mas pode variar de 1 a 10 minutos.<br> Não saia do sistema até a
+                        conclusão.
+                    </p>
+                </div>
+                </p>
+            </div>
+
+            <div class="upload-section">
+                <label for="file-upload" class="custom-file-upload">Escolher Arquivo</label>
+                <input type="file" id="file-upload" multiple style="display: none;">
+            </div>
+        </div>
+
+        <div class="file-section">
+            <h2>Seus Arquivos</h2>
+            <ul id="file-list">
+
+            </ul>
+        </div>
+    </div>
+    <script type="module" src="/JavaScript/firebaseHome.js"></script>
+
+    <script type="module" src="/JavaScript/home.js"></script>
+    <script src="/ImagemDeFundo/fundoDaTela.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+</body>
+
+</html>

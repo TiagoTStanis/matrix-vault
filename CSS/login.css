@@ -1,0 +1,128 @@
+/* ============ Button Styles ============ */
+#btn-entrar,
+#btn-esquiceSenha,
+#btn-acessar {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Botão "Acessar" */
+#btn-acessar {
+    width: 100%;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Botão "Entrar" */
+#btn-entrar {
+    width: 48%;
+    background-color: #5cb85c;
+    color: white;
+    display: none;
+    max-height: 1; 
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Botão "Esqueci Senha" */
+#btn-esquiceSenha {
+    width: 48%;
+    background-color: #007bff;
+    color: white;
+    display: none;
+    max-height: 1;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Hover para botões */
+#btn-entrar:hover,
+#btn-acessar:hover,
+#btn-voltar:hover {
+    background-color: #4cae4c;
+}
+
+#btn-esquiceSenha:hover {
+    background-color: #0056b3;
+}
+
+/* ============ Form Groups ============ */
+.group-senha {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.group-email input[disabled] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Mostrar botões e campos ocultos */
+.show {
+    max-height: none;
+    opacity: 1;
+}
+
+.showBtn {
+    max-height: 100%;
+}
+
+/* ============ Voltar Button ============ */
+#btn-emailVoltar {
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #007bff;
+    background-color: black;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6), inset 0 0 5px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+    display: none;
+}
+
+#btn-emailVoltar:hover {
+    background-color: #007bff;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8), inset 0 0 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 10px black;
+}
+
+/* ============ Header e Layout Syles ============ */
+h1 {
+    font-size: 50px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.head-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    opacity: 1;
+}
+
+/* Alinhamento de botões */
+#btn-entrar,
+#btn-esquiceSenha,
+#btn-acessar {
+    justify-content: space-between;
+}

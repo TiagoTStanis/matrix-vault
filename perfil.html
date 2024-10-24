@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    <link rel="stylesheet" type="text/css" href="/CSS/man.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/errorStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/ImagemDeFundo/fundoDaTela.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/perfil.css" />
+    <!-- Firebase App (necessário para usar qualquer serviço do Firebase) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+    <title>Matrix Vault | Perfil</title>
+</head>
+
+<body>
+    <canvas id="code-background"></canvas>
+
+    <div class="container">
+        <h1>Perfil</h1>
+
+        <div class="profile-photo-section">
+            <img id="profilePhotoView" src="/ImagemDeFundo/imagem/perfilMatrix.jpg" alt="" class="profile-photo">
+
+            <label for="profilePhoto" class="custom-file-upload">
+                Escolher Foto
+            </label>
+            <input type="file" id="profilePhoto" accept="image/*">
+            <div id="photoError" class="error-message">Por favor, envie uma imagem válida</div>
+        </div>
+
+        <form id="profileForm">
+            <div class="group-nome">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+                <div id="nomeError" class="error-message">Nome inválido</div>
+            </div>
+
+            <div class="group-email">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <div id="emailError" class="error-message">E-mail inválido</div>
+            </div>
+
+            <div class="group-telefone">
+                <label>Celular:</label>
+                <div id="custom-ddd-select" class="custom-ddd-select">
+                    <span id="selected-ddd">DDD</span>
+                    <ul id="ddd-list" class="ddd-list" style="display: none;"></ul>
+                </div>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu numero">
+                <span id="erroTelefone" class="glitch-effect" style="color: red; display:none;">Erro: ❌ Selecione DDD
+                    antes de digital. Conexão interrompida.</span>
+            </div>
+            <a></a>
+            <div class="groupGenero">
+                <label id="genero">Gênero:</label>
+
+                <label for="masculinoRadio" id="masculinoLabel">
+                    <input type="radio" id="masculinoRadio" name="genero" value="Masculino">Masculino
+                </label>
+                <label for="femininoRadio" id="femininoLabel">
+                    <input type="radio" id="femininoRadio" name="genero" value="Feminino">Feminino
+                </label>
+            </div>
+            <span id="erroGeneroDNS" class="glitch-effect" style="display:none;">Erro: ❌ Selecione um gênero.
+                Inconsistência no sistema de identidade.</span>
+
+            <a></a>
+            <a></a>
+            <a></a>
+            
+            <div class="group-data-nascimento">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" placeholder="Selecione sua data de nascimento">
+                <div id="dataNascimentoError" class="error-message">Data de nascimento inválida</div>
+            </div>
+
+            <div class="group-idade">
+                <label for="idade">Idade:</label>
+                <input type="text" id="idade" disabled>
+            </div>
+
+            <div class="group-pais">
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="">Selecione um país</option>
+                </select>
+                <div id="paisError" class="error-message">Por favor, selecione seu país</div>
+            </div>
+
+            <button type="submit" class="btn-submit">Salvar Perfil</button>
+
+            <div id="erroSubmit" class="error-message">Corrija os erros antes de enviar.</div>
+        </form>
+    </div>
+
+    <script src="/JavaScript/paises.js"></script>
+    <script type="module" src="/JavaScript/perfil.js"></script>
+    <script src="/JavaScript/conuntries.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script type="module" src="/JavaScript/firebase-config.js"></script>
+    <script src="/ImagemDeFundo/fundoDaTela.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+/* ============ Reset e Body Styles ============ */
+html, body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-y: auto;
+    display: block;
+    position: relative;
+}
+
+body {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 2px; 
+    padding-bottom: 2px;
+    overflow-y: auto; 
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* ============ Container Styles ============ */
+.container {
+    max-height: 90vh;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 35px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    color: #00ff00;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1000;
+    position: relative;
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(180deg, #00ff00, #006600);
+    color: black;
+    border: 2px solid #00ff00;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), inset 0 0 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.container button:hover {
+    background: linear-gradient(180deg, #00cc00, #003300);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 1), inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.container > * {
+    flex-grow: unset;
+    flex-shrink: unset; 
+    min-height: auto;
+}
+
+.container h1 {
+    font-size: 80px;
+    color: #00ff00;
+    text-shadow: 0 0 90px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ============ Form Input ============ */
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #00ff00;
+    background-color: black;
+    color: #00ff00;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+input {
+    border: 1px solid #00ff00;
+}
+input:focus {
+    outline: none;
+}
+
+input, select {
+    border-width: 3px;
+}
+
+[class^="group-"] {
+    margin-bottom: 15px;
+}
+
+[class^="group-"] label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.group-pais select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.group-pais {
+    position: relative;
+}
+
+.group-pais select:focus {
+    outline: none;
+    border-color: #00cc00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+.group-telefone {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.group-telefone label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00ff00;
+}
+
+.group-telefone select {
+    width: 30%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    appearance: none;
+    cursor: pointer;
+}
+
+.group-telefone input {
+    width: 65%;
+    padding: 10px;
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* ============ Button e Links ============ */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(180deg, #00ff00, #009900);
+    color: black;
+    border: 1px solid #00ff00;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6), inset 0 0 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.container button:hover {
+    background: linear-gradient(180deg, #009900, #00ff00);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8), inset 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.container button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.container a {
+    display: block;
+    margin-top: 15px;
+    font-size: 30px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s ease;
+}
+
+.container a:hover {
+    color: #00cc00;
+    text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+    text-decoration: underline;
+}
+
+/* ============ Button Group Styles ============ */
+[class$="-dentro"] {
+    max-width: 200px;
+    margin: auto;
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+/* ============ Radio Buttons ============ */
+.groupGenero input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* ============ Voltar Button ============ */
+.seta-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #007bff;
+    background-color: black;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6), inset 0 0 5px rgba(0, 123, 255, 0.4);
+    z-index: 2;
+}
+
+.seta-voltar:hover {
+    background-color: #007bff;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8), inset 0 0 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 10px black;
+}
+
+/* ============ Error Message ============ */
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ============ Subimit Button ============ */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.btn-submit:hover {
+    background-color: #4cae4c;
+}
+
+/* ============ layout Select ============ */
+.custom-ddd-select {
+    position: relative;
+    padding: 10px;
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    text-align: center;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+#selected-ddd {
+    display: block;
+    white-space: nowrap;
+}
+
+.ddd-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    background-color: black;
+    border: 1px solid #00ff00;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ddd-list li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #00ff00;
+    transition: background-color 0.3s ease;
+}
+
+.ddd-list li img {
+    vertical-align: middle;
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.ddd-list li:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+.ddd-list {
+    display: none;
+}
+
+.group-telefone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="tel"] {
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}
+
+/* ============ layout placeholder ============ */
+input::placeholder {
+    color: #00FF00;
+    opacity: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}
+
+select::placeholder {
+    color: #00FF00;
+    opacity: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}

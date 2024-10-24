@@ -1,0 +1,41 @@
+/* ============ style Errors ============ */
+
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+.glitch-effect {
+    position: relative;
+    animation: glitch 0.8s infinite;
+    color: #00FF7F; 
+    /*text-shadow: 0 0 3px #00FF7F, 0 0 8px #00FF7F, 0 0 12px #00FF7F;*/
+    font-weight: bold;
+}
+
+input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid {
+    border: 2px solid #FF0000;
+    box-shadow: 0 0 5px #FF0000;
+}
+
+span.glitch-effect {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: red;
+}
+
+#erroSubmit {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    border: 1px solid #00FF00;
+    box-shadow: 0 0 5px #00FF00;
+}
