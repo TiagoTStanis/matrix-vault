@@ -270,7 +270,7 @@ ul#file-list::-webkit-scrollbar-track {
 .matrix-btn {
     font-family: 'Courier New', Courier, monospace;
     color: #000000;
-    background-color: #00ff00; /* Faz o botão ser verde brilhante */
+    background-color: #00ff00;
     border: 0px solid #00ff00;
     padding: 10px 20px;
     font-size: 18px;
